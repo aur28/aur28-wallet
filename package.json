@@ -1,0 +1,33 @@
+{
+  "name": "aur28-wallet-app",
+  "version": "1.0.0",
+  "description": "AUR28 Wallet Desktop App",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder",
+    "build": "electron-builder --dir"
+  },
+  "build": {
+    "appId": "org.aur28.wallet",
+    "productName": "AUR28 Wallet",
+    "directories": {
+      "buildResources": "build"
+    },
+    "icon": "build/icon.ico",
+    "win": {
+      "target": "nsis",
+      "icon": "build/icon.ico"
+    },
+    "nsis": {
+      "oneClick": true,
+      "perMachine": false
+    }
+  },
+  "author": "Aurum28",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "electron-builder": "^25.0.0"
+  }
+}
